@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {cyan500, lightBlue500} from 'material-ui/styles/colors';
+import {cyan500, indigo500, indigo50, white, black, brown100} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import App from './components/App';
@@ -15,8 +15,17 @@ const muiTheme = getMuiTheme({
         textColor: cyan500,
     },
     appBar: {
-        color: lightBlue500,
+        color: indigo500,
     },
+    tabs: {
+        backgroundColor: indigo50,
+        textColor: black,
+        selectedTextColor: black,
+    },
+    inkBar: {
+        backgroundColor: brown100,
+    },
+
 });
 
 // MuiThemeProvider takes the theme as a property and passed it down the hierarchy.
