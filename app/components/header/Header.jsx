@@ -1,17 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
-/**
- * A simple example of `AppBar` with an icon on the right.
- * By default, the left icon is a navigation-menu.
- */
-const Login = () => (
-    <FlatButton label="login" primary={true} />
-);
-const Header = () => (
-    <div>
-        <AppBar title="FUNDING PACK" iconElementRight={<FlatButton label="LOG IN"/>}/>
-    </div>
-);
+import IconButton from 'material-ui/IconButton';
+
+class Header extends Component {
+    render(){
+        const Menu = () => (
+            <AppBar
+                title="LOGO"
+                iconElementLeft={<IconButton iconClassName="muidocs-icon-custom-github" />}
+                iconElementRight={<FlatButton label="LOG IN"/>}
+            />
+        );
+
+        return(
+            <div>
+                <Menu/>
+
+
+            </div>
+        );
+    }
+}
 
 export default Header;
